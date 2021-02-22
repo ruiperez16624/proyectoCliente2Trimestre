@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Cestas</title>
+
+<link href="css/estilo.css" rel="stylesheet" type="text/css" />
+<script src="./js/pedido.js"></script>
+</head>
+
+	<body class="unColor">
+        <div id="container">
+            <div id="header">
+                <div class="flotar1">
+                    <a href="index.html"><img src="img/logo2.png" title="Inicio de Panader&iacute;a DIW" alt="Logo de Panader�a DIW" width="180px" /></a>
+                </div>
+                
+                <div id="menu">
+                    <div class="hola">
+                        <a href="index.html" target="_self"><h3>Inicio</h3></a>
+                    </div>
+                    <div class="hola">
+                        <a href="Pedido.html" target="_self"><h3>Tu Pedido</h3></a>
+                    </div>
+                    <div class="hola">
+                        <a href="Miembros.html" target="_self"><h3>Nuestros Miembros</h3></a>
+                    </div>  
+                    <div class="hola">
+                        <a href="sugerencias.html" target="_self"><h3>Sugerencias</h3></a>
+                    </div>                                 
+                </div>  
+            </div>   
+            
+            <div id="mainContent">
+                <div>
+                    <h3 class="tituloPedido">Introduce tu Pedido</h3>
+                </div>
+                <div>
+                    <input type="button" value="Ver Nuestras Cestas" onclick="var T=(parseInt(window.screen.height)/2)-150; var L=(parseInt(window.screen.width)/2)-250; ventanaSecundaria=window.open('VentanaEmergenteCestas.html','ventanaSec', 'top='+T+', left='+L+', width=800, height=600')">
+                </div>
+                <br>
+                <form name="formularioPedido">
+                    <div>
+                        Usuario:                                                    <!--función que solo permiten teclear letras e introducir 9 carácteres-->
+                        <input type="text" name="usuario" value="" onkeydown="return keyNombre(window.event)">
+                    </div>
+                    <br>
+                    <div>
+                        Correo Electrónico:
+                        <input type="email" name="correo" value="">
+                    </div>
+                    <br>
+                    <div>
+                        Teléfono:                                              <!--funciones que solo permiten teclear números e introducir 9 carácteres-->
+                        <input type="tel" name="tlf" value="" onkeydown="return keyNum(window.event)" onkeypress="return validarFinal()">
+                    </div>
+                    <br>
+                    <div>
+                        Forma de Pago:
+                        <select name="pag" id="pago">
+                            <option value="Contrarembolso">Contrarembolso</option>
+                            <option value="PayPal">PayPal</option>
+                            <option value="Tarjeta Credito">Tarjeta Credito</option>
+                        </select>
+                    </div>
+                    <div>
+                        Elegir Cesta:
+                        <select name="elegir" id="elegido">
+                            <option value="Cesta 1">Cesta 1</option>
+                            <option value="Cesta 2">Cesta 2</option>
+                            <option value="Cesta 3">Cesta 3</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div>
+                        <input type="button" value="Ver Resumen" onclick="ingresarDatosArray()">
+                    </div>
+                </form>           
+                <div>
+                    <p id="resumenInformacion"></p>    
+                </div>
+            </div>
+            
+            <div id="footer">
+                        
+                <div class="yi" style="right: 10;">
+                    <p>&copy; Javier Ruipérez</p>
+                </div>
+                <div class="yi">
+                    <input type="button" value="Información adicional" onclick="var T=(parseInt(window.screen.height)/2)-150; var L=(parseInt(window.screen.width)/2)-300; ventanaInfoAdicional = window.open('ventanaInfoAdicional.html', 'Nueva Ventana', 'top='+T+' left='+L+', width=600, height=300');"/>
+                </div>
+                <div class="yi">
+                    <p style="font-size:small;">Productos de primera calidad, productos para celebraciones, eventos de empresa...</p>
+                </div> 
+            </div>
+        </div>
+    </div>
+</body>
+</html>
