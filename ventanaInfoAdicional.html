@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Cestas</title>
+
+<link href="css/estilo.css" rel="stylesheet" type="text/css" />
+</head>
+
+	<body>
+		<script type="text/javascript">	
+		//Utilizamos el objeto Navigator para que nos muestre la versión en la que nos encontramos
+			var es_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
+			var es_firefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+			var es_explorer = navigator.userAgent.toLowerCase().indexOf('MSIE') > -1;
+			
+			/*document.write("Navegador: " + navigator.appName + "<br>");
+			document.write("Versión: " + navigator.appVersion + "<br>");
+			document.write("Ultima modificacion: " + document.lastModified + "<br>");*/
+			
+			if (es_chrome)
+			{
+				document.write("El navegador utilizado es Google Chrome");
+			}
+			if (es_firefox)
+			{
+				document.write("El navegador utilizado es Mozilla Firefox");
+			}
+			if (es_explorer)
+			{
+				document.write("El navegador utilizado es Internet Explorer");
+			}		
+		
+		</script>
+                
+	</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+	<title>Ejer 1</title>
+	<link href="css/estilo.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body onload="refrescarDOM()">
+
+	<body class="unColor">
+		<div id="container">
+			<div id="header">
+                <div class="flotar1">
+                    <a href="index.html"><img src="img/logo2.png" title="Inicio de Panader&iacute;a DIW" alt="Logo de Panader�a DIW" width="180px" /></a>
+                </div>
+                
+                <div id="menu">
+                    <div class="hola">
+                        <a href="index.html" target="_self"><h3>Inicio</h3></a>
+                    </div>
+                    <div class="hola">
+                        <a href="Pedido.html" target="_self"><h3>Tu Pedido</h3></a>
+                    </div>
+                    <div class="hola">
+                        <a href="Miembros.html" target="_self"><h3>Nuestros Miembros</h3></a>
+                    </div>  
+                    <div class="hola">
+                        <a href="sugerencias.html" target="_self"><h3>Sugerencias</h3></a>
+                    </div>                                 
+                </div>  
+            </div>   
+			<hr />
+
+			<!-- Crear un nuevo socio -->
+			<div>
+				<button onclick="nuevaVentana()">Crear nuevo socio</button>
+			</div>
+
+			<hr />
+
+			<div>
+				<form name="formu">
+					<div id="img_f">
+						<!-- imagen hijo -->
+					</div>
+					<div>
+						<label><strong>Nombre:</strong></label><br />
+						<input type="text" id="txtnomape" name="nomape">
+					</div>
+					<div>
+						<label><strong>Apellidos:</strong></label><br />
+						<input type="text" id="txtnomape" name="apellidos">
+					</div>
+					<div>
+						<label><strong>Funciones:</strong></label><br />
+						<input type="text" id="txtfuncion" name="funcion">
+					</div>
+					<div>
+						<label><strong>Telefono:</strong></label><br />							<!--funciones que solo permiten teclear números e introducir 9 carácteres-->
+						<input type="text" id="txttelefono" name="telefono" onkeydown="return validarTelefonoEvento(window.event)" onkeypress="return validarFinal()">
+					</div>
+					<br /><br /><br /><br /><br /><br />
+					<div>
+						<label><b>Selecciona el miembro de la plantilla para ver sus datos:</b></label><br />
+						<select name="lista" id="lista" onchange="mostrarInfo()">
+							<!-- hijos -->
+						</select>
+						<input type="button" name="botonModificar" value="Modificar Datos" onclick="modificarDatos()">
+					</div>
+				</form>
+				<br /><br /><br /><br /><br />
+				<hr>
+			</div>
+
+			<div id="footer">
+                
+                <div class="yi" style="right: 10;">
+                    <p>&copy; Javier Ruipérez</p>
+                </div>
+                <div class="yi">
+                    <input type="button" value="Información adicional" onclick="var T=(parseInt(window.screen.height)/2)-150; var L=(parseInt(window.screen.width)/2)-300; ventanaInfoAdicional = window.open('ventanaInfoAdicional.html', 'Nueva Ventana', 'top='+T+' left='+L+', width=600, height=300');"/>
+                </div>
+                <div class="yi">
+                    <p style="font-size:small;">Productos de primera calidad, productos para celebraciones, eventos de empresa...</p>
+                </div> 
+			</div>
+		</div>
+		<script src="js/scriptMiembros.js">
+			
+		</script>
+	</body>
+
+
+
+</html>
